@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:linear-gradient(#200016,#10001f);
+    height: 100vh;
+    font-family: system-ui;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+header{
+    position: fixed;
+    width: 95%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;    
+}
+
+header ul li{
+    margin-right: 30px;
+}
+
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+header ul li a:hover , .active{
+    background: #ffffff;
+    color: #200016;
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.main:after{
+    content:"" ;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient( to top, #200016,transparent);
+}
+
+.main img{
+    position: absolute;
+    width: 100vw;
+    object-fit: cover;
+
+}
+
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+    
+}
+
+.walaa{
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+    margin-top: 6rem;
+}
+
+.content{
+    color:#ffffff;
+    padding: 30px;
+    
+}
+
+.content h2{
+    margin: 20px;
+    padding: 30px;
+}
+
+.content p{
+    margin: 20px;
+}
+
+/*--التجاوب-----*/
+@media (min-width:670px) and (max-width:1498px){
+ .main{
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+ }
+ .main img{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+ }
+}
+
+@media (min-width:58px) and (max-width:670px){
+    header ul{
+        display: none;
+    }
+    .main img{         
+        width: 100%;
+        height: 100vh;
+    }
+    .walaa{
+        margin-bottom: 8rem;
+    }
+}
+
+@media (min-width:657px) and (max-width:1749px){
+    .walaa{
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-width:1794px) and (max-width:1746px){
+    .walaa{
+        margin-bottom: rem;
+    }
+}
+@media(min-width:2002) {
+    #moon{
+        object-fit: cover;
+    }
+    .main{
+        height: 100%;
+        width: 100vw;
+
+    }
+    #main img{
+        height: 100vh;
+    }
+    #stars{
+        height: 100vh;
+        width: 100vw;
+    }
+}
